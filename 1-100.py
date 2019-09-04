@@ -10,10 +10,11 @@ def ask_and_check(rand_number):
     else:
         print("Tak! Brawo!")
         return 0
-    print("Zgadnij jeszcze raz:")
+    print("Zgadnij jeszcze raz: ", end="")
     ask_and_check(rand_number)
 
 
 number = random.randint(1, 100)
-print("Zgadnij jaka to liczba: ")
+print("Została wylosowana liczba z przedziały 0-100.")
+print("Zgadnij jaka to liczba: ", end="")
 ask_and_check(number)
