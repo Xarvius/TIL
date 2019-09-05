@@ -1,7 +1,10 @@
 import random
 
 
-def ask_and_check(rand_number):
+def ask_and_check():
+    rand_number = random.randint(1, 100)
+    print("Została wylosowana liczba z przedziały 1-100.")
+    print("Zgadnij jaka to liczba: ", end="")
     while True:
         try:
             answer = int(input())
@@ -18,7 +21,4 @@ def ask_and_check(rand_number):
     print("Tak! Brawo!")
 
 
-number = random.randint(1, 100)
-print("Została wylosowana liczba z przedziały 1-100.")
-print("Zgadnij jaka to liczba: ", end="")
-ask_and_check(number)
+ask_and_check()
