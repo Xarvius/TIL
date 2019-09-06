@@ -11,8 +11,12 @@ A collection of links and concise write-ups on small things I learn day to day a
 - [How to create a repository on github](https://help.github.com/en/articles/create-a-repo)
 
 ## Day 2
-- Refresh basic knowledge about Python: variables, loops for and while, if, functions, list, tuple, sipmle string manipulations etc.
-- Refresh basic commend in Git Bash + gained knowledge about git rebase, log.
+[Official python tutorial](https://docs.python.org/3/tutorial/)
+- [Refresh basic knowledge about Python: variables, loops for and while, if, functions, list, tuple, sipmle string manipulations etc.](https://www.youtube.com/playlist?reload=9&list=PLdBHMlEKo8UcOaykMssI1_X6ui0tzTNoH) (1-13)
+- [Enumerate, if in](https://gist.github.com/Xarvius/375338d2bfbc9fcda2703dbd303764f9)
+- [git rebase --interactive](https://www.youtube.com/watch?v=MLOxFLULJQI)
+- git status | git log --decorate --oneline --graph <3
+
 
 ## Day 3
-- Gained knowledge about import
+- [Gained knowledge about import, file, exceptions](https://www.youtube.com/playlist?reload=9&list=PLdBHMlEKo8UcOaykMssI1_X6ui0tzTNoH) (14-17)
