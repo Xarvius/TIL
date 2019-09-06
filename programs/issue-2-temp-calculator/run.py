@@ -14,11 +14,11 @@ def menu():
     print("2) Stopnie Fahrenheita na Celsjusza")
     while True:
         try:
-            user_request = int(input("Wybierz: "))
+            user_options = int(input("Wybierz: "))
         except ValueError:
             print("Musisz podać numer opcji!")
             continue
-        if not 2 >= user_request >= 1:
+        if not 1 <= user_options <= 2:
             print("Nie istnieje taka opcja.")
             continue
         else:
@@ -30,9 +30,9 @@ def menu():
             print("Musisz podać liczbę!")
             continue
         break
-    if user_request == 1:
+    if user_options == 1:
         celsius_to_fahrenheit(value)
-    elif user_request == 2:
+    elif user_options == 2:
         fahrenheit_to_celsius(value)
 
 
