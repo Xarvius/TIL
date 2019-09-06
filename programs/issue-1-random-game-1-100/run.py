@@ -8,7 +8,7 @@ def ask_and_check():
     while True:
         try:
             answer = int(input())
-        except:
+        except ValueError:
             print("Gramy na int'ach! Podaj jeszcze raz: ", end="")
             continue
         if answer > rand_number:
