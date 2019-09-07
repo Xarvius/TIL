@@ -1,17 +1,21 @@
-def m_s_to_km_h():
-    pass
+def m_s_to_km_h(value):
+    converted = value * 3.6
+    return "{} m/s to {} km/h".format(value, converted)
 
 
-def km_h_to_m_s():
-    pass
+def km_h_to_m_s(value):
+    converted = value / 3.6
+    return "{} km/h to {} m/s".format(value, converted)
 
 
-def km_h_to_mile_h():
-    pass
+def km_h_to_mile_h(value):
+    converted = value / 1.609
+    return "{} km/h to {} mile/h".format(value, converted)
 
 
-def km_h_to_percent_light_speed():
-    pass
+def km_h_to_percent_light_speed(value):
+    converted = value / 1.079e+9
+    return "{} km/h to {}% speed of light".format(value, converted)
 
 
 def menu():
@@ -40,17 +44,16 @@ def menu():
             continue
         break
     if user_options == 1:
-        pass
+        answer = m_s_to_km_h(value)
     elif user_options == 2:
-        pass
+        answer = km_h_to_m_s(value)
     elif user_options == 3:
         pass
     elif user_options == 4:
-        pass
+        answer = km_h_to_mile_h(value)
     elif user_options == 5:
-        pass
-    print("answer")
-
+        answer = km_h_to_percent_light_speed(value)
+    print(answer)
 
 
 print("Program do konwersji prędkości w różnych jednostkach.", end="")
