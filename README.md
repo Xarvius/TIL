@@ -20,3 +20,9 @@ A collection of links and concise write-ups on small things I learn day to day a
 
 ## Day 3
 - [Gained knowledge about import, file, exceptions](https://www.youtube.com/playlist?reload=9&list=PLdBHMlEKo8UcOaykMssI1_X6ui0tzTNoH) (14-17)
+
+## Day 4
+- [Class, self in class, magical methods, own exceptions](https://www.youtube.com/playlist?list=PLdBHMlEKo8UcOaykMssI1_X6ui0tzTNoH) (18-22)
+- [More about agical methods](http://farmdev.com/src/secrets/magicmethod/index.html)
+
+##Day 5
