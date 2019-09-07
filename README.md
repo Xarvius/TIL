@@ -25,4 +25,7 @@ A collection of links and concise write-ups on small things I learn day to day a
 - [Class, self in class, magical methods, own exceptions](https://www.youtube.com/playlist?list=PLdBHMlEKo8UcOaykMssI1_X6ui0tzTNoH) (18-22)
 - [More about agical methods](http://farmdev.com/src/secrets/magicmethod/index.html)
 
-##Day 5
+## Day 5
+- [git](https://edu.devstyle.pl/product/git/) (todo)
+- [5-sposobow-na-prace-z-gitem](https://devstyle.pl/2018/10/26/5-sposobow-na-prace-z-gitem/)
+- [10 Sekretnych Komend Gita, O Których Nie Masz Pojęcia](https://convertkit.s3.amazonaws.com/landing_pages/incentives/000/414/200/original/devstyle-Git-10-komend.pdf?1537630848)
