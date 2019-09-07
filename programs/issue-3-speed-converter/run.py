@@ -8,6 +8,11 @@ def km_h_to_m_s(value):
     return "{} km/h to {} m/s".format(value, converted)
 
 
+def mile_h_to_km_h(value):
+    converted = value * 1.609
+    return "{} mile/h to {} km/h".format(value, converted)
+
+
 def km_h_to_mile_h(value):
     converted = value / 1.609
     return "{} km/h to {} mile/h".format(value, converted)
@@ -48,7 +53,7 @@ def menu():
     elif user_options == 2:
         answer = km_h_to_m_s(value)
     elif user_options == 3:
-        pass
+        answer = mile_h_to_km_h(value)
     elif user_options == 4:
         answer = km_h_to_mile_h(value)
     elif user_options == 5:
