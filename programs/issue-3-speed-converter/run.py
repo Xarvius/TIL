@@ -1,3 +1,18 @@
+def m_s_to_km_h():
+    pass
+
+
+def km_h_to_m_s():
+    pass
+
+
+def km_h_to_mile_h():
+    pass
+
+
+def km_h_to_percent_light_speed():
+    pass
+
 
 def menu():
     print("Jaką konwersje chcesz wykonać?")
@@ -34,6 +49,8 @@ def menu():
         pass
     elif user_options == 5:
         pass
+    print("answer")
+
 
 
 print("Program do konwersji prędkości w różnych jednostkach.", end="")
