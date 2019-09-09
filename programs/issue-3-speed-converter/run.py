@@ -23,6 +23,39 @@ def km_h_to_percent_light_speed(value):
     return "{} km/h to {}% speed of light".format(value, converted)
 
 
+convert_dictionary = {
+ 1: {
+     "input": "m/s",
+     "output": "km/h",
+     "equation": "value * 3.6"
+ },
+ 2: {
+     "input": "km/h",
+     "output": "m/s",
+     "equation": "value / 3.6"
+ },
+ 3: {
+     "input": "mile/h",
+     "output": "km/h",
+     "equation": "value * 1.609"
+ },
+ 4: {
+     "input": "km/h",
+     "output": "mile/h",
+     "equation": "value / 1.609"
+ },
+ 5: {
+     "input": "km/h",
+     "output": "% prędkości światła",
+     "equation": "value / 1.079e+9"},
+}
+
+
+def converter(value, equation, input, output):
+    converted = eval(equation)
+    print(value, input, "to", converted, output)
+
+
 def end_check():
     while True:
         user_options = input("Czy zakończyć program ([T]ak/[N]ie)? ")
