@@ -1,6 +1,5 @@
 convert_dictionary = {
  1: [
-
      "m/s",
      "km/h",
      "value * 3.6"
