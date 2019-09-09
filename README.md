@@ -27,6 +27,12 @@ A collection of links and concise write-ups on small things I learn day to day a
 - 'never' git add . | git add -p <3
 
 ## Day 5
-- [git](https://edu.devstyle.pl/product/git/) (todo)
+- [git](https://edu.devstyle.pl/product/git/) (config, tools)
 - [5-sposobow-na-prace-z-gitem](https://devstyle.pl/2018/10/26/5-sposobow-na-prace-z-gitem/)
 - [10 Sekretnych Komend Gita, O Których Nie Masz Pojęcia](https://convertkit.s3.amazonaws.com/landing_pages/incentives/000/414/200/original/devstyle-Git-10-komend.pdf?1537630848)
+
+## Day 6
+- [git](https://edu.devstyle.pl/product/git/) (tags, alias)
+  - [git tag](https://gist.github.com/Xarvius/d7c472f1b554ae77232ba0f50aca627a) annotated > lightweight(temp/auto)
+  - [~..^](https://gist.github.com/Xarvius/5fcda2d428a7d83937a8cdd5c2e726ff) (tag/commit navigation)
+- [Own autocomplete](https://gist.github.com/Xarvius/20153299b756c59fd9622bdb9b2dbd88) //swap to alias soon
