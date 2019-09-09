@@ -55,11 +55,12 @@ def menu():
             except ValueError:
                 print("Musisz podać numer opcji!")
                 continue
-            if not 1 <= user_options <= 5:
+            try:
+                user_options = convert_dictionary[user_options]
+            except KeyError:
                 print("Nie istnieje taka opcja.")
                 continue
-            else:
-                break
+            break
         while True:
             try:
                 value = float(input("Podaj wartość: "))
@@ -67,7 +68,6 @@ def menu():
                 print("Musisz podać liczbę!")
                 continue
             break
-        user_options = convert_dictionary[user_options]
         converter(value, user_options)
         if end_check():
             break
