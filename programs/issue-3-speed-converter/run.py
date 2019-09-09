@@ -27,8 +27,13 @@ convert_dictionary = {
  ]
 }
 
+
 def converter(value, options):
-    input, output, equation = options
+    try:
+        input, output, equation = options
+    except ValueError:
+        print("Coś poszło nie tak. Spróbuj ponownie później.")
+        return
     converted = eval(equation)
     print(value, input, "to", converted, output)
 
