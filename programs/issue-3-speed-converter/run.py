@@ -1,28 +1,28 @@
 convert_dictionary = {
- 1: {
+ "1": {
      "input": "m/s",
      "output": "km/h",
-     "equation": "value * 3.6",
+     "equation": lambda value: value * 3.6,
  },
- 2: {
+ "2": {
      "input": "km/h",
      "output": "m/s",
-     "equation": "value / 3.6",
+     "equation": lambda value: value / 3.6,
  },
- 3: {
+ "3": {
      "input": "mile/h",
      "output": "km/h",
-     "equation": "value * 1.609",
+     "equation": lambda value: value * 1.609,
  },
- 4:  {
+ "4":  {
      "input": "km/h",
      "output": "mile/h",
-     "equation": "value / 1.609",
+     "equation": lambda value: value / 1.609,
  },
- 5: {
+ "5": {
      "input": "km/h",
      "output": "% prędkości światła",
-     "equation": "value / 1.079e+9",
+     "equation": lambda value: value / 1.079e+9,
  },
 }
 
@@ -33,8 +33,7 @@ def converter(value, options):
     except KeyError:
         print("Coś poszło nie tak. Spróbuj ponownie później.")
         return
-    converted = eval(equation)
-    print(value, input_type, "to", converted, output_type)
+    print(value, input_type, "to", equation(value), output_type)
 
 
 def end_check():
@@ -54,11 +53,7 @@ def menu():
             list_one = convert_dictionary[one]
             print(one, ")", list_one["input"], "na", list_one["output"])
         while True:
-            try:
-                user_options = input("Wybierz: ")
-            except ValueError:
-                print("Musisz podać numer opcji!")
-                continue
+            user_options = input("Wybierz: ")
             try:
                 user_options = convert_dictionary[user_options]
             except KeyError:
