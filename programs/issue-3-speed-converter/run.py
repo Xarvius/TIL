@@ -25,7 +25,7 @@ convert_dictionary = {
 def converter(value, options):
     try:
         input, output, equation = options["input"], options["output"], options["equation"]
-    except ValueError:
+    except KeyError:
         print("Coś poszło nie tak. Spróbuj ponownie później.")
         return
     converted = eval(equation)
