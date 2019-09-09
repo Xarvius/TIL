@@ -1,35 +1,30 @@
 convert_dictionary = {
- 1: [
-     "m/s",
-     "km/h",
-     "value * 3.6"
- ],
- 2: [
-     "km/h",
-     "m/s",
-     "value / 3.6"
- ],
- 3: [
-     "mile/h",
-     "km/h",
-     "value * 1.609"
- ],
- 4: [
-     "km/h",
-     "mile/h",
-     "value / 1.609"
- ],
- 5: [
-     "km/h",
-     "% prędkości światła",
-     "value / 1.079e+9"
- ]
+ 1: {
+     "input": "m/s",
+     "output": "km/h",
+     "equation": "value * 3.6"},
+ 2: {
+     "input": "km/h",
+     "output": "m/s",
+     "equation": "value / 3.6"},
+ 3: {
+     "input": "mile/h",
+     "output": "km/h",
+     "equation": "value * 1.609"},
+ 4:  {
+     "input": "km/h",
+     "output": "mile/h",
+     "equation": "value / 1.609"},
+ 5: {
+     "input": "km/h",
+     "output": "% prędkości światła",
+     "equation": "value / 1.079e+9"}
 }
 
 
 def converter(value, options):
     try:
-        input, output, equation = options
+        input, output, equation = options["input"], options["output"], options["equation"]
     except ValueError:
         print("Coś poszło nie tak. Spróbuj ponownie później.")
         return
@@ -52,7 +47,7 @@ def menu():
         print("Jaką konwersje chcesz wykonać?")
         for one in convert_dictionary:
             list_one = convert_dictionary[one]
-            print(one, ")", list_one[0], "na", list_one[1])
+            print(one, ")", list_one["input"], "na", list_one["output"])
         while True:
             try:
                 user_options = int(input("Wybierz: "))
