@@ -6,7 +6,9 @@ def currency_converter(start_currency, end_currency, amount_currency):
         "base": start_currency
     }
     response = requests.get("https://api.exchangeratesapi.io/latest", params=param)
-    print(response.json())
+    currency_rates = response.json()["rates"][end_currency]
+    converted = amount_currency * currency_rates
+    print("{} {} to {} {}".format(amount_currency, start_currency, converted, end_currency))
 
 
 def menu():
