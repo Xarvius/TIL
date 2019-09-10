@@ -72,5 +72,5 @@ def menu():
             break
 
 
-print("Program do konwersji prędkości w różnych jednostkach.", end="")
+print("Program do konwersji prędkości w różnych jednostkach.", end=" ")
 menu()
