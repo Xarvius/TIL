@@ -24,7 +24,7 @@ def currency_converter(start_currency, end_currency, amount_currency):
         print("Nie znaleziono waluty: {}".format(end_currency))
         return
 
-    converted = amount_currency * currency_rates
+    converted = round(amount_currency * currency_rates, 2)
     print(amount_currency, start_currency, "to", converted, end_currency)
 
 
@@ -40,7 +40,7 @@ def end_check():
 
 def menu():
     while True:
-        print("Dostępne waluty: PLN, EUR, USD, CHF, CNY.")
+        print("Dostępne waluty: PLN, EUR, USD, CHF, CNY...")
         start_currency = input("Wybierz pierwszą walutę: ").upper()
         end_currency = input("Wybierz drugą walutę: ").upper()
         while True:
