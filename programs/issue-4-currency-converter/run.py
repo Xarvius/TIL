@@ -41,8 +41,8 @@ def end_check():
 def menu():
     while True:
         print("Dostępne waluty: PLN, EUR, USD, CHF, CNY.")
-        start_currency = input("Wybierz pierwszą walutę: ")
-        end_currency = input("Wybierz drugą walutę: ")
+        start_currency = input("Wybierz pierwszą walutę: ").upper()
+        end_currency = input("Wybierz drugą walutę: ").upper()
         while True:
             try:
                 amount_currency = float(input("Podaj kwotę w walucie {}: ".format(start_currency)))
