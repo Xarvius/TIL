@@ -12,7 +12,7 @@ def currency_converter(start_currency, end_currency, amount_currency):
         print("Wystąpił błąd, spróbuj ponownie. W przypadku powtórzenia się błedu, spróbuj później.")
         return
     converted = amount_currency * currency_rates
-    print("{} {} to {} {}".format(amount_currency, start_currency, converted, end_currency))
+    print(amount_currency, start_currency, "to", converted, end_currency)
 
 
 def end_check():
