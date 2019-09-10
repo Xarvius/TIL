@@ -1,5 +1,12 @@
-def currency_converter():
-    pass
+import requests
+
+
+def currency_converter(start_currency, end_currency, amount_currency):
+    param = {
+        "base": start_currency
+    }
+    response = requests.get("https://api.exchangeratesapi.io/latest", params=param)
+    print(response.json())
 
 
 def menu():
@@ -14,8 +21,8 @@ def menu():
             print("Musisz podać liczbę!")
             continue
     print("Trwa sprawdzanie kursu...")
-    currency_converter()
-    
+    currency_converter(start_currency, end_currency, amount_currency)
+
 
 print("Program do konwersji walut.")
 menu()
