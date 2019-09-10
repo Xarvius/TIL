@@ -5,12 +5,25 @@ def currency_converter(start_currency, end_currency, amount_currency):
     param = {
         "base": start_currency
     }
-    response = requests.get("https://api.exchangeratesapi.io/latest", params=param)
+    try:
+        response = requests.get("https://api.exchangeratesapi.io/latest", params=param)
+        response.raise_for_status()
+    except requests.exceptions.HTTPError:
+        print("Nie znaleziono waluty: {}".format(start_currency))
+        return
+    except requests.exceptions.ConnectionError:
+        print("Wystąpił błąd. Sprawdź połaczenie z internetem.")
+        return
+    except requests.exceptions.Timeout:
+        print("Przekroczono czas oczekiwania na odpowiedź. Spróbuj ponownie później.")
+        return
+
     try:
         currency_rates = response.json()["rates"][end_currency]
     except KeyError:
-        print("Wystąpił błąd, spróbuj ponownie. W przypadku powtórzenia się błedu, spróbuj później.")
+        print("Nie znaleziono waluty: {}".format(end_currency))
         return
+
     converted = amount_currency * currency_rates
     print(amount_currency, start_currency, "to", converted, end_currency)
 
