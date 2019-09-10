@@ -6,7 +6,11 @@ def currency_converter(start_currency, end_currency, amount_currency):
         "base": start_currency
     }
     response = requests.get("https://api.exchangeratesapi.io/latest", params=param)
-    currency_rates = response.json()["rates"][end_currency]
+    try:
+        currency_rates = response.json()["rates"][end_currency]
+    except KeyError:
+        print("Wystąpił błąd, spróbuj ponownie. W przypadku powtórzenia się błedu, spróbuj później.")
+        return
     converted = amount_currency * currency_rates
     print("{} {} to {} {}".format(amount_currency, start_currency, converted, end_currency))
 
@@ -17,7 +21,7 @@ def menu():
     end_currency = input("Wybierz drugą walutę: ")
     while True:
         try:
-            amount_currency = int(input("Podaj kwotę w walucie {}: ".format(start_currency)))
+            amount_currency = float(input("Podaj kwotę w walucie {}: ".format(start_currency)))
             break
         except ValueError:
             print("Musisz podać liczbę!")
