@@ -8,24 +8,25 @@ def currency_converter(start_currency, end_currency, amount_currency):
     try:
         response = requests.get("https://api.exchangeratesapi.io/latest", params=param)
         response.raise_for_status()
-    except requests.exceptions.HTTPError:
+    except requests.exceptions.HTTPError as err:
         print("Nie znaleziono waluty: {}".format(start_currency))
-        return
-    except requests.exceptions.ConnectionError:
+        return "HttpError"
+    except requests.exceptions.ConnectionError as err:
         print("Wystąpił błąd. Sprawdź połaczenie z internetem.")
-        return
-    except requests.exceptions.Timeout:
+        return "ConnectionError"
+    except requests.exceptions.Timeout as err:
         print("Przekroczono czas oczekiwania na odpowiedź. Spróbuj ponownie później.")
-        return
+        return "Timeout"
 
     try:
         currency_rates = response.json()["rates"][end_currency]
-    except KeyError:
+    except KeyError as err:
         print("Nie znaleziono waluty: {}".format(end_currency))
-        return
+        return "KeyError"
 
     converted = round(amount_currency * currency_rates, 2)
     print(amount_currency, start_currency, "to", converted, end_currency)
+    return converted
 
 
 def end_check():
@@ -56,5 +57,5 @@ def menu():
             break
 
 
-print("Program do konwersji walut.")
-menu()
+#print("Program do konwersji walut.")
+#menu()
