@@ -1,12 +1,12 @@
 import requests
-
+from constants import CURRENCY_URL
 
 def currency_converter(start_currency, end_currency, amount_currency):
     param = {
         "base": start_currency
     }
     try:
-        response = requests.get("https://api.exchangeratesapi.io/latest", params=param)
+        response = requests.get(CURRENCY_URL, params=param)
         response.raise_for_status()
     except requests.exceptions.HTTPError as err:
         print("Nie znaleziono waluty: {}".format(start_currency))
