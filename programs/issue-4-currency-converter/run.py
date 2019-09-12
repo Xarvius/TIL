@@ -2,16 +2,17 @@ import requests
 from constants import CURRENCY_API
 
 
-def error_handler(err):
+def error_handler(err, response):
     pass
 
 
 def converter_main(start_currency, end_currency, amount_currency):
     try:
         response = get_rates(start_currency, end_currency)
-        converter_currency(start_currency, end_currency, amount_currency, response)
+        end_currency_value = get_end_rate(response, end_currency)
+        converter_currency(start_currency, end_currency, amount_currency, end_currency_value)
     except (ValueError, ConnectionError, TimeoutError, KeyError) as err:
-        error_handler(err)
+        error_handler(err, response)
 
 
 def converter_currency(start_currency, end_currency, amount_currency, response):
@@ -39,9 +40,12 @@ def get_rates_from_exchangeratesapi_io(start_currency, end_currency):
         raise ConnectionError
     except requests.exceptions.Timeout:
         raise TimeoutError
+    return response.json()["rates"]
 
+
+def get_end_rate(rates, end_currency):
     try:
-        return response.json()["rates"]     #[end_currency]
+        return rates[end_currency]
     except KeyError as Err:
         raise Err
 
