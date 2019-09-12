@@ -2,21 +2,28 @@ import requests
 from constants import CURRENCY_API
 
 
+def error_handler(err):
+    pass
+
+
 def converter_main(start_currency, end_currency, amount_currency):
-    currency_rates = get_rates(start_currency, end_currency)
-    converted = converter_currency(amount_currency, currency_rates)
+    try:
+        response = get_rates(start_currency, end_currency)
+        converter_currency(start_currency, end_currency, amount_currency, response)
+    except (ValueError, ConnectionError, TimeoutError, KeyError) as err:
+        error_handler(err)
+
+
+def converter_currency(start_currency, end_currency, amount_currency, response):
+    converted = round(amount_currency * response, 2)
     print(amount_currency, start_currency, "to", converted, end_currency)
-
-
-def converter_currency(amount_currency, currency_rates):
-    return round(amount_currency * currency_rates, 2)
 
 
 def get_rates(start_currency, end_currency):
     if CURRENCY_API == 'https://api.exchangeratesapi.io/latest':
         return get_rates_from_exchangeratesapi_io(start_currency, end_currency)
     else:
-        raise Exception("error")
+        raise NameError
 
 
 def get_rates_from_exchangeratesapi_io(start_currency, end_currency):
@@ -26,20 +33,17 @@ def get_rates_from_exchangeratesapi_io(start_currency, end_currency):
     try:
         response = requests.get(CURRENCY_API, params=param)
         response.raise_for_status()
-    except requests.exceptions.HTTPError as err:
-        print("Nie znaleziono waluty: {}".format(start_currency))
-        return "HttpError"
-    except requests.exceptions.ConnectionError as err:
-        print("Wystąpił błąd. Sprawdź połaczenie z internetem.")
-        return "ConnectionError"
-    except requests.exceptions.Timeout as err:
-        print("Przekroczono czas oczekiwania na odpowiedź. Spróbuj ponownie później.")
-        return "Timeout"
+    except requests.exceptions.HTTPError:
+        raise ValueError
+    except requests.exceptions.ConnectionError:
+        raise ConnectionError
+    except requests.exceptions.Timeout:
+        raise TimeoutError
+
     try:
-        return response.json()["rates"][end_currency]
-    except KeyError as err:
-        print("Nie znaleziono waluty: {}".format(end_currency))
-        return "KeyError"
+        return response.json()["rates"]     #[end_currency]
+    except KeyError as Err:
+        raise Err
 
 
 def end_check():
