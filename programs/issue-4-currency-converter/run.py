@@ -5,7 +5,7 @@ from constants import CURRENCY_API
 def converter_main(start_currency, end_currency, amount_currency):
     while True:
         try:
-            response = get_rates(start_currency, end_currency)
+            response = get_rates(start_currency)
             end_currency_value = get_end_rate(response, end_currency)
             converter_currency(start_currency, end_currency, amount_currency, end_currency_value)
             break
@@ -26,14 +26,14 @@ def converter_currency(start_currency, end_currency, amount_currency, response):
     print(amount_currency, start_currency, "to", converted, end_currency)
 
 
-def get_rates(start_currency, end_currency):
+def get_rates(start_currency):
     if CURRENCY_API == 'https://api.exchangeratesapi.io/latest':
-        return get_rates_from_exchangeratesapi_io(start_currency, end_currency)
+        return get_rates_from_exchangeratesapi_io(start_currency)
     else:
         raise NameError
 
 
-def get_rates_from_exchangeratesapi_io(start_currency, end_currency):
+def get_rates_from_exchangeratesapi_io(start_currency):
     param = {
         "base": start_currency
     }
