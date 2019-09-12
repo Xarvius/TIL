@@ -2,6 +2,16 @@ import requests
 from constants import CURRENCY_API
 
 
+def converter_main(start_currency, end_currency, amount_currency):
+    currency_rates = get_rates(start_currency, end_currency)
+    converted = converter_currency(amount_currency, currency_rates)
+    print(amount_currency, start_currency, "to", converted, end_currency)
+
+
+def converter_currency(amount_currency, currency_rates):
+    return round(amount_currency * currency_rates, 2)
+
+
 def get_rates(start_currency, end_currency):
     param = {
         "base": start_currency
@@ -23,13 +33,6 @@ def get_rates(start_currency, end_currency):
     except KeyError as err:
         print("Nie znaleziono waluty: {}".format(end_currency))
         return "KeyError"
-
-
-def currency_converter(start_currency, end_currency, amount_currency):
-    currency_rates = get_rates(start_currency, end_currency)
-    converted = round(amount_currency * currency_rates, 2)
-    print(amount_currency, start_currency, "to", converted, end_currency)
-    return converted
 
 
 def end_check():
@@ -55,7 +58,7 @@ def menu():
                 print("Musisz podać liczbę!")
                 continue
         print("Trwa sprawdzanie kursu...")
-        currency_converter(start_currency, end_currency, amount_currency)
+        converter_main(start_currency, end_currency, amount_currency)
         if end_check():
             break
 
