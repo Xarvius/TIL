@@ -13,9 +13,9 @@ def converter_main(start_currency, end_currency, amount_currency):
             print("Wystąpił błąd połączenia, spróbuj ponownie później.")
             break
         except ValueError:
-            start_currency = input("Podaj poprawną nazwę waluty poczatkowej: ")
+            start_currency = input("Podaj poprawną nazwę waluty poczatkowej: ").upper()
         except KeyError:
-            end_currency = input("Podaj poprawną nazwę waluty docelowej: ")
+            end_currency = input("Podaj poprawną nazwę waluty docelowej: ").upper()
         except NameError:
             print("Wystąpił błąd programu.")
             break
