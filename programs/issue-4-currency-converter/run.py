@@ -2,17 +2,23 @@ import requests
 from constants import CURRENCY_API
 
 
-def error_handler(err, response):
-    pass
-
-
 def converter_main(start_currency, end_currency, amount_currency):
-    try:
-        response = get_rates(start_currency, end_currency)
-        end_currency_value = get_end_rate(response, end_currency)
-        converter_currency(start_currency, end_currency, amount_currency, end_currency_value)
-    except (ValueError, ConnectionError, TimeoutError, KeyError) as err:
-        error_handler(err, response)
+    while True:
+        try:
+            response = get_rates(start_currency, end_currency)
+            end_currency_value = get_end_rate(response, end_currency)
+            converter_currency(start_currency, end_currency, amount_currency, end_currency_value)
+            break
+        except (ConnectionError, TimeoutError):
+            print("Wystąpił błąd połączenia, spróbuj ponownie później.")
+            break
+        except ValueError:
+            start_currency = input("Podaj poprawną nazwę waluty poczatkowej: ")
+        except KeyError:
+            end_currency = input("Podaj poprawną nazwę waluty docelowej: ")
+        except NameError:
+            print("Wystąpił błąd programu.")
+            break
 
 
 def converter_currency(start_currency, end_currency, amount_currency, response):
