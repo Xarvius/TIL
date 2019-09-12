@@ -13,6 +13,13 @@ def converter_currency(amount_currency, currency_rates):
 
 
 def get_rates(start_currency, end_currency):
+    if CURRENCY_API == 'https://api.exchangeratesapi.io/latest':
+        return get_rates_from_exchangeratesapi_io(start_currency, end_currency)
+    else:
+        raise Exception("error")
+
+
+def get_rates_from_exchangeratesapi_io(start_currency, end_currency):
     param = {
         "base": start_currency
     }
