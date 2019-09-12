@@ -1,10 +1,11 @@
+import unittest
 from unittest import TestCase
-from unittest.mock import Mock, patch
-from run import currency_converter
+from unittest.mock import patch
+from run import get_rates_from_exchangeratesapi_io, converter_main
 
 
 class TestCurrencyConverter(TestCase):
-    def test_currency_converter(self):
+    def test_get_rates_from_exchangeratesapi_io(self):
         mock_list = {
             "rates":
             {
@@ -15,22 +16,22 @@ class TestCurrencyConverter(TestCase):
             "date": "2019-09-11",
         }
         with patch('run.requests.get') as mock_get:
-           # mock_get.return_value = Mock(ok=True)
             mock_get.return_value.json.return_value = mock_list
-            response = currency_converter("EUR", "PLN", 1)
-        self.assertIsNotNone(response)
+            response = get_rates_from_exchangeratesapi_io("EUR")
+        self.assertIn("PLN", response)
 
-        #start, end, currency = "PLN", "EUR", 1
-        #param = {
-            #"base": start
-        #}
-        #response = requests.get("https://api.exchangeratesapi.io/latest", params=param)
-        #currency_rates = response.json()["rates"][end]
-        #converted = round(currency * currency_rates, 2)
-        #self.assertEqual(currency_converter(start, end, currency), converted)
+    def test_get_rates_from_exchangeratesapi_io_connection_fail(self):
+        with patch('run.requests.get') as mock_get:
+            mock_get.side_effect = ConnectionError
+            converter_main("PLN", "EUR", 1)
+        self.assertRaises(ConnectionError)
 
-    #def test_currency_converter_bad_start(self):
-        #self.assertEqual(currency_converter("badCurrency", "EUR", 1), "HttpError")
+    def test_get_rates_from_exchangeratesapi_io_timeout_fail(self):
+        with patch('run.requests.get') as mock_get:
+            mock_get.side_effect = TimeoutError
+            converter_main("PLN", "EUR", 1)
+        self.assertRaises(TimeoutError)
 
-    #def test_currency_converter_bad_end(self):
-        #self.assertEqual(currency_converter("PLN", "badCurrency", 1), "KeyError")
+
+if __name__ == '__main__':
+    unittest.main()
