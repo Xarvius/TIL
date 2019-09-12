@@ -1,12 +1,13 @@
 import requests
-from constants import CURRENCY_URL
+from constants import CURRENCY_API
 
-def currency_converter(start_currency, end_currency, amount_currency):
+
+def get_rates(start_currency, end_currency):
     param = {
         "base": start_currency
     }
     try:
-        response = requests.get(CURRENCY_URL, params=param)
+        response = requests.get(CURRENCY_API, params=param)
         response.raise_for_status()
     except requests.exceptions.HTTPError as err:
         print("Nie znaleziono waluty: {}".format(start_currency))
@@ -17,13 +18,15 @@ def currency_converter(start_currency, end_currency, amount_currency):
     except requests.exceptions.Timeout as err:
         print("Przekroczono czas oczekiwania na odpowiedź. Spróbuj ponownie później.")
         return "Timeout"
-
     try:
-        currency_rates = response.json()["rates"][end_currency]
+        return response.json()["rates"][end_currency]
     except KeyError as err:
         print("Nie znaleziono waluty: {}".format(end_currency))
         return "KeyError"
 
+
+def currency_converter(start_currency, end_currency, amount_currency):
+    currency_rates = get_rates(start_currency, end_currency)
     converted = round(amount_currency * currency_rates, 2)
     print(amount_currency, start_currency, "to", converted, end_currency)
     return converted
@@ -57,5 +60,5 @@ def menu():
             break
 
 
-#print("Program do konwersji walut.")
-#menu()
+print("Program do konwersji walut.")
+menu()

@@ -1,1 +1,1 @@
-CURRENCY_URL = 'https://api.exchangeratesapi.io/latest'
+CURRENCY_API = 'https://api.exchangeratesapi.io/latest'
