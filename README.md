@@ -36,3 +36,21 @@ A collection of links and concise write-ups on small things I learn day to day a
   - [git tag](https://gist.github.com/Xarvius/d7c472f1b554ae77232ba0f50aca627a) annotated > lightweight(temp/auto)
   - [~..^](https://gist.github.com/Xarvius/5fcda2d428a7d83937a8cdd5c2e726ff) (tag/commit navigation)
 - [Own autocomplete](https://gist.github.com/Xarvius/20153299b756c59fd9622bdb9b2dbd88) //swap to alias soon
+
+## Day 7
+- [Python testing](https://realpython.com/python-testing/)
+- [Virtualenvwrapper](https://virtualenvwrapper.readthedocs.io) - must have with packages
+
+## Day 8
+- [Unit Testing vs Integration Testing](http://www.softwaretestingclass.com/what-is-difference-between-unit-testing-and-integration-testing/)
+- [Mocking in python](https://auth0.com/blog/mocking-api-calls-in-python/)
+- [Still mocking in python](https://realpython.com/python-mock-library/#what-is-mocking)
+- [Asserations test - unittest](https://kapeli.com/cheat_sheets/Python_unittest_Assertions.docset/Contents/Resources/Documents/index)
+
+## Day 9
+- [git](https://edu.devstyle.pl/product/git/) (merge, branch)
+  - [merge](https://dev.to/neshaz/how-to-use-git-merge-the-correctway-25pd)
+  - cherry-picking for move commit
+  - no-ff in merge for no fast forward (flat merge)
+  - git init --bare (create repo for share code)
+  
