@@ -59,4 +59,17 @@ A collection of links and concise write-ups on small things I learn day to day a
   - pull = fetch + merge (better fetch and manual)
   - git diff --cached (diffrence added to staged area)
 
-  
+## Day 11
+- [git](https://edu.devstyle.pl/product/git/)
+  - git checkout -- file (return file from last commit) or gut checkout commit -- file (we can use *.html - all files .html)
+  - git reset --hard (reset modify from disc too) without reset only back commit whithout modify files (example: git reset @^)
+  - git clean (for remove files) -n (test - only show) -i (interactive) -f (force - real delete) -x (delete file from gitignore) - fd(files and folders)
+  - git stash - 'hidden' commit (git stash list - list) (git stash pop - last stash back to working copy) use only with save and own tekst
+  - [.gitignore (name/ ignore folder name) (we can use pattern like *.txt, [bB]in/ (bin and Bin)](https://github.com/github/gitignore)
+    - .git/info/exlude - private .gitignore
+    - git check-ignore 
+    - git update-index --asume-unchanged file (ignore for tracked files) --no-asume-unchanged for back
+    - git ls-files -v (list files + status, 'h' for asume-unchanged)
+      - git ls-files -v | grep "^[[:lower:]]" list only asume-unchanged files
+    - git config include.path file_dir (include own configuration)
+      - includeif.statment example: git config --global includeif.gitdir:C:/dev/work .path .gitfile (add .gitfile to global config only to repos in C:/dev/work)
