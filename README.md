@@ -54,3 +54,9 @@ A collection of links and concise write-ups on small things I learn day to day a
   - no-ff in merge for no fast forward (flat merge)
   - git init --bare (create repo for share code)
   
+## Day 10
+- [git](https://edu.devstyle.pl/product/git/)
+  - pull = fetch + merge (better fetch and manual)
+  - git diff --cached (diffrence added to staged area)
+
+  
