@@ -73,3 +73,21 @@ A collection of links and concise write-ups on small things I learn day to day a
       - git ls-files -v | grep "^[[:lower:]]" list only asume-unchanged files
     - git config include.path file_dir (include own configuration)
       - includeif.statment example: git config --global includeif.gitdir:C:/dev/work .path .gitfile (add .gitfile to global config only to repos in C:/dev/work)
+
+## Day 12
+- [git](https://edu.devstyle.pl/product/git/)
+  - git reset --hard ORIG_HEAD - return before merge/rebase
+  - git fetch --prune --prune-tags
+- [VIM](https://www.openvim.com/tutorial.html)
+
+## Day 13
+- git rerere - merge helper (memory our chose)
+- git rever - revert changes
+- git commit --amend - edit last commit
+- git rebase - lineary history -i for interactive mode
+- filter-branch - tools for rewrite history
+- git remote update --prune - update branch (in someone delete branch, this command delete local too)
+- git blame / git gui blame - last editor (line)
+- git log -S txt -p - find txt in commit (but not in title) -S is pickaxe
+- --format=%h | clip - good help to easy copy commit (for pickaxe)
+- git bisect - bug catcher
