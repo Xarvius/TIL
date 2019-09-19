@@ -91,3 +91,9 @@ A collection of links and concise write-ups on small things I learn day to day a
 - git log -S txt -p - find txt in commit (but not in title) -S is pickaxe
 - --format=%h | clip - good help to easy copy commit (for pickaxe)
 - git bisect - bug catcher
+
+## Day 14
+- [git](https://edu.devstyle.pl/product/git/)
+  - (gitsubmodules)[https://git-scm.com/book/en/v2/Git-Tools-Submodules]
+  - (gitslave)[http://gitslave.sourceforge.net]
+  - (subtrea)[https://www.atlassian.com/git/tutorials/git-subtree] (the best? for submodules still better package management)
