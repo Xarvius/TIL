@@ -81,19 +81,20 @@ A collection of links and concise write-ups on small things I learn day to day a
 - [VIM](https://www.openvim.com/tutorial.html)
 
 ## Day 13
-- git rerere - merge helper (memory our chose)
-- git rever - revert changes
-- git commit --amend - edit last commit
-- git rebase - lineary history -i for interactive mode
-- filter-branch - tools for rewrite history
-- git remote update --prune - update branch (in someone delete branch, this command delete local too)
-- git blame / git gui blame - last editor (line)
-- git log -S txt -p - find txt in commit (but not in title) -S is pickaxe
-- --format=%h | clip - good help to easy copy commit (for pickaxe)
-- git bisect - bug catcher
+- [git](https://edu.devstyle.pl/product/git/)
+  - git rerere - merge helper (memory our chose)
+  - git revert - revert changes
+  - git commit --amend - edit last commit
+  - git rebase - lineary history -i for interactive mode
+  - filter-branch - tools for rewrite history
+  - git remote update --prune - update branch (in someone delete branch, this command delete local too)
+  - git blame / git gui blame - last editor (line)
+  - git log -S txt -p - find txt in commit (but not in title) -S is pickaxe
+  - --format=%h | clip - good help to easy copy commit (for pickaxe)
+  - git bisect - bug catcher
 
 ## Day 14
 - [git](https://edu.devstyle.pl/product/git/)
-  - (gitsubmodules)[https://git-scm.com/book/en/v2/Git-Tools-Submodules]
-  - (gitslave)[http://gitslave.sourceforge.net]
-  - (subtrea)[https://www.atlassian.com/git/tutorials/git-subtree] (the best? for submodules still better package management)
+  - [gitsubmodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+  - [gitslave](http://gitslave.sourceforge.net)
+  - [subtrea](https://www.atlassian.com/git/tutorials/git-subtree) (the best? for submodules still better package management)
