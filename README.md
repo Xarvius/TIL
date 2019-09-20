@@ -4,7 +4,6 @@
 A collection of links and concise write-ups on small things I learn day to day across a variety of languages and technologies.
 
 ## Day 1
-
 - [What do programmers actually do?](https://www.youtube.com/watch?v=FVdQETvHBoE) 
 - [Front end vs Back end | Blonde Dictionary explanation](https://www.youtube.com/watch?v=NlpK0-TLrjw)
 - [What is Git and Github? Source Control —Coding For Beginners](https://www.youtube.com/watch?v=3bchX_7ANQc)
@@ -16,7 +15,6 @@ A collection of links and concise write-ups on small things I learn day to day a
 - [Enumerate, if in](https://gist.github.com/Xarvius/375338d2bfbc9fcda2703dbd303764f9)
 - [git rebase --interactive](https://www.youtube.com/watch?v=MLOxFLULJQI)
 - git status | git log --decorate --oneline --graph <3
-
 
 ## Day 3
 - [Import, file, exceptions](https://www.youtube.com/playlist?reload=9&list=PLdBHMlEKo8UcOaykMssI1_X6ui0tzTNoH) (14-17)
@@ -100,7 +98,7 @@ A collection of links and concise write-ups on small things I learn day to day a
   - [subtrea](https://www.atlassian.com/git/tutorials/git-subtree) (the best? for submodules still better package management)
   
 ## Day 15
-- [python]https://www.learnpython.org/en/Welcome)
+- [python](https://www.learnpython.org/en/Welcome)
   - [Generators](https://chyla.org/blog/Python_-_Generatory/)
   - [List Comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
   - [Regular Expressions](https://www.learnpython.org/en/Regular_Expressions)
