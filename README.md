@@ -98,3 +98,11 @@ A collection of links and concise write-ups on small things I learn day to day a
   - [gitsubmodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
   - [gitslave](http://gitslave.sourceforge.net)
   - [subtrea](https://www.atlassian.com/git/tutorials/git-subtree) (the best? for submodules still better package management)
+  
+## Day 15
+- [python]https://www.learnpython.org/en/Welcome)
+  - [Generators](https://chyla.org/blog/Python_-_Generatory/)
+  - [List Comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
+  - [Regular Expressions](https://www.learnpython.org/en/Regular_Expressions)
+    - [more](https://docs.python.org/3/library/re.html#regular-expression-syntax"RE%20syntax)
+  - [Multiple Function Arguments](https://www.learnpython.org/en/Multiple_Function_Arguments)
