@@ -104,3 +104,9 @@ A collection of links and concise write-ups on small things I learn day to day a
   - [Regular Expressions](https://www.learnpython.org/en/Regular_Expressions)
     - [more](https://docs.python.org/3/library/re.html#regular-expression-syntax"RE%20syntax)
   - [Multiple Function Arguments](https://www.learnpython.org/en/Multiple_Function_Arguments)
+
+## Day 16
+- [Python](https://www.programiz.com/python-programming)
+  - [Global, Local and Nonlocal variables](https://www.programiz.com/python-programming/global-local-nonlocal-variables)
+  - else with while, for
+- [Kite](https://kite.com)
