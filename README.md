@@ -110,3 +110,15 @@ A collection of links and concise write-ups on small things I learn day to day a
   - [Global, Local and Nonlocal variables](https://www.programiz.com/python-programming/global-local-nonlocal-variables)
   - else with while, for
 - [Kite](https://kite.com)
+
+## Day 17
+- [Python](https://www.programiz.com/python-programming)
+  - [Numbers - Fractions](https://www.programiz.com/python-programming/numbers)
+  - [Set](https://www.programiz.com/python-programming/set) - 'While using discard() if the item does not exist in the set, it remains unchanged. But remove() will raise an error in such condition.'
+  
+## Day 18
+- [Python](https://www.programiz.com/python-programming)
+  - [OOP in Python](https://www.programiz.com/python-programming/object-oriented-programming) - Inheritance, Encapsulation, Polymorphism
+    - [More about inheritance](https://www.programiz.com/python-programming/multiple-inheritance)
+      - Method Resolution Order (MRO) - 'In the multiple inheritance scenario, any specified attribute is searched first in the current class. If not found, the search continues into parent classes in depth-first, left-right fashion without searching same class twice.'
+  - [Operator overloading](https://www.programiz.com/python-programming/operator-overloading)
