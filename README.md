@@ -122,3 +122,16 @@ A collection of links and concise write-ups on small things I learn day to day a
     - [More about inheritance](https://www.programiz.com/python-programming/multiple-inheritance)
       - Method Resolution Order (MRO) - 'In the multiple inheritance scenario, any specified attribute is searched first in the current class. If not found, the search continues into parent classes in depth-first, left-right fashion without searching same class twice.'
   - [Operator overloading](https://www.programiz.com/python-programming/operator-overloading)
+
+## Day 19
+- [Python](https://www.programiz.com/python-programming)
+  - [Class iterator](https://www.programiz.com/python-programming/iterator)
+  - [Closure](https://www.programiz.com/python-programming/closure)
+  - [Decorators](https://www.programiz.com/python-programming/decorator)
+  
+  
+## Day 20
+- [Python](https://www.programiz.com/python-programming)
+  - [@property](https://www.programiz.com/python-programming/property)
+  - [Deep copy](https://www.programiz.com/python-programming/shallow-deep-copy)
+  - [Asseration](https://www.programiz.com/python-programming/assert-statement)
