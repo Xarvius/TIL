@@ -135,3 +135,15 @@ A collection of links and concise write-ups on small things I learn day to day a
   - [@property](https://www.programiz.com/python-programming/property)
   - [Deep copy](https://www.programiz.com/python-programming/shallow-deep-copy)
   - [Asseration](https://www.programiz.com/python-programming/assert-statement)
+
+## Day 21
+- [Django](https://docs.djangoproject.com/pl/2.1/intro/)
+  - [Introduction](https://docs.djangoproject.com/pl/2.1/intro/overview/)
+  - [Install](https://docs.djangoproject.com/pl/2.1/intro/install/)
+  
+## Day 22
+- [Django](https://docs.djangoproject.com/pl/2.1/intro/)
+  - [Tutorial 1-3](https://docs.djangoproject.com/pl/2.1/intro/tutorial01/)
+  
+## Day 23
+- [Java](https://javastart.pl/baza-wiedzy/java-podstawy-jezyka)
