@@ -153,3 +153,10 @@ A collection of links and concise write-ups on small things I learn day to day a
 - [Docker - install](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-engine---community)
   - [Docker run without sudo](https://docs.docker.com/install/linux/linux-postinstall/)
   - [Basic tutorial (1-2)](https://github.com/docker/labs/tree/master/beginner/)
+  
+## Day 26 
+- Remember the three-step guide to making model changes:
+  - Change your models (in models.py).
+  - Run python manage.py makemigrations to create migrations for those changes
+  - Run python manage.py migrate to apply those changes to the database.
+
