@@ -159,4 +159,5 @@ A collection of links and concise write-ups on small things I learn day to day a
   - Change your models (in models.py).
   - Run python manage.py makemigrations to create migrations for those changes
   - Run python manage.py migrate to apply those changes to the database.
+- You should always return an HttpResponseRedirect after successfully dealing with POST data. This tip isn’t specific to Django; it’s just good Web development practice
 
