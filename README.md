@@ -164,3 +164,8 @@ A collection of links and concise write-ups on small things I learn day to day a
 ## Day 27
 - psycopg2 need to migrate db to postgres
   - if install error on virtualenv [check](https://stackoverflow.com/questions/5420789/how-to-install-psycopg2-with-pip-on-python)
+- For security, we can split django settings and docker-composer for normal and prod version.
+- File .env is good places for system variables (and passwords). Add it to .gitignore.
+- When u run docker-compose (containter with few docker-compose.yml) add them in command line, like: docker compose -f docker-compose.yml -f docker-compose.prod.yml
+  - check them in the same way (prev command with ps on the end)
+- [See](https://github.com/Xarvius/django-first)
