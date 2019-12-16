@@ -161,3 +161,6 @@ A collection of links and concise write-ups on small things I learn day to day a
   - Run python manage.py migrate to apply those changes to the database.
 - You should always return an HttpResponseRedirect after successfully dealing with POST data. This tip isn’t specific to Django; it’s just good Web development practice
 
+## Day 27
+- psycopg2 need to migrate db to postgres
+  - if install error on virtualenv [check](https://stackoverflow.com/questions/5420789/how-to-install-psycopg2-with-pip-on-python)
