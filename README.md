@@ -160,6 +160,9 @@ A collection of links and concise write-ups on small things I learn day to day a
   - Run python manage.py makemigrations to create migrations for those changes
   - Run python manage.py migrate to apply those changes to the database.
 - You should always return an HttpResponseRedirect after successfully dealing with POST data. This tip isn’t specific to Django; it’s just good Web development practice
+- pip freeze - installed packages
+- create requirments.txt with your installed packages like name=version 
+  - pip install -r requirements.txt
 
 ## Day 27
 - psycopg2 need to migrate db to postgres
