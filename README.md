@@ -172,3 +172,7 @@ A collection of links and concise write-ups on small things I learn day to day a
 - When u run docker-compose (containter with few docker-compose.yml) add them in command line, like: docker compose -f docker-compose.yml -f docker-compose.prod.yml
   - check them in the same way (prev command with ps on the end)
 - [See](https://github.com/Xarvius/django-first)
+
+## Day 28
+- ("In django our working directory is always the folder that containts manage.py")[https://books.google.pl/books/about/Test_Driven_Development_with_Python.html?id=2CgvDwAAQBAJ&printsec=frontcover&source=kp_read_button&redir_esc=y#v=onepage&q&f=false]
+- 
