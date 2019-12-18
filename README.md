@@ -175,4 +175,4 @@ A collection of links and concise write-ups on small things I learn day to day a
 
 ## Day 28
 - ("In django our working directory is always the folder that containts manage.py")[https://books.google.pl/books/about/Test_Driven_Development_with_Python.html?id=2CgvDwAAQBAJ&printsec=frontcover&source=kp_read_button&redir_esc=y#v=onepage&q&f=false]
-- 
+- (f-strings > format() > % formating)[https://realpython.com/python-f-strings/]
